@@ -1,3 +1,5 @@
+import { gameboard } from "./gameboard";
+
 export function ship(size) {
   const length = size;
   let timesHit = 0;
@@ -5,7 +7,8 @@ export function ship(size) {
 
   function hit() {
     timesHit = timesHit + 1;
-    // isSunk();
+    isSunk();
+    console.log(getSunkValue());
   }
 
   function getTimesHit() {
@@ -13,12 +16,7 @@ export function ship(size) {
   }
 
   function isSunk() {
-    if (timesHit === length) {
-      sunk = true;
-    }
-    if (timesHit != length) {
-      return sunk;
-    }
+    sunk = timesHit === length;
     return sunk;
   }
 
@@ -28,8 +26,6 @@ export function ship(size) {
 
   return {
     length,
-    timesHit,
-    sunk,
     hit,
     isSunk,
     getTimesHit,
