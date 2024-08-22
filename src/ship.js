@@ -1,24 +1,27 @@
-export function ship(size) {
+import { gameboard } from "./gameboard";
+
+export function ship(size, name) {
   const length = size;
   let timesHit = 0;
   let sunk = false;
+  let shipName = name;
 
   function hit() {
     timesHit = timesHit + 1;
-    // isSunk();
+    isSunk();
+    console.log(getSunkValue());
   }
 
   function getTimesHit() {
     return timesHit;
   }
 
+  function getName() {
+    return shipName;
+  }
+
   function isSunk() {
-    if (timesHit === length) {
-      sunk = true;
-    }
-    if (timesHit != length) {
-      return sunk;
-    }
+    sunk = timesHit === length;
     return sunk;
   }
 
@@ -28,11 +31,10 @@ export function ship(size) {
 
   return {
     length,
-    timesHit,
-    sunk,
     hit,
     isSunk,
     getTimesHit,
     getSunkValue,
+    getName,
   };
 }
