@@ -1,9 +1,10 @@
 import { gameboard } from "./gameboard";
 
-export function ship(size) {
+export function ship(size, name) {
   const length = size;
   let timesHit = 0;
   let sunk = false;
+  let shipName = name;
 
   function hit() {
     timesHit = timesHit + 1;
@@ -13,6 +14,10 @@ export function ship(size) {
 
   function getTimesHit() {
     return timesHit;
+  }
+
+  function getName() {
+    return shipName;
   }
 
   function isSunk() {
@@ -30,5 +35,6 @@ export function ship(size) {
     isSunk,
     getTimesHit,
     getSunkValue,
+    getName,
   };
 }

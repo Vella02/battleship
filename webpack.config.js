@@ -10,6 +10,13 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
     clean: true,
   },
+  devServer: {
+    static: {
+      directory: path.join(__dirname, "dist"), // Serve from 'dist' directory
+    },
+    open: true, // Automatically open the browser
+    hot: true, // Enable Hot Module Replacement
+  },
   plugins: [
     new HtmlWebpackPlugin({
       template: "./src/main.html",
