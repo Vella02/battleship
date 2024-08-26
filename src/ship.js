@@ -1,5 +1,3 @@
-import { gameboard } from "./gameboard";
-
 export function ship(size, name) {
   const length = size;
   let timesHit = 0;

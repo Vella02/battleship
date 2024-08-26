@@ -72,12 +72,6 @@ export function gameBoard() {
     }
   }
 
-  placeShip([2, 7], [6, 7], ships.carrier.getName());
-  placeShip([2, 4], [5, 4], ships.battleship.getName());
-  placeShip([0, 7], [0, 9], ships.destroyer.getName());
-  placeShip([8, 1], [8, 3], ships.submarine.getName());
-  placeShip([6, 6], [7, 6], ships.patrolBoat.getName());
-
   //logic for taking attacks
   function receiveAttack(array) {
     let [x, y] = array;
