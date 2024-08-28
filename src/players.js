@@ -13,6 +13,17 @@ export function player() {
   playerBoard.placeShip([8, 1], [8, 3], playerBoard.ships.submarine.getName());
   playerBoard.placeShip([6, 6], [7, 6], playerBoard.ships.patrolBoat.getName());
 
+  //   const userDivs = document.querySelectorAll(".squareDivplayer");
+  //   userDivs.forEach((div) => {
+  //     div.addEventListener("click", () => {
+  //       const row = parseInt(div.dataset.row);
+  //       const col = parseInt(div.dataset.col);
+  //       console.log(row, col);
+  //       if (playerBoard.receiveAttack([row, col]) === false) {
+  //         div.classList.add("miss");
+  //       }
+  //     });
+  //   });
   return {
     playerBoard,
     getPlayerBoard,

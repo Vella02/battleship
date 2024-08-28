@@ -1,6 +1,6 @@
 import { ship } from "./ship";
 
-export function gameBoard() {
+export function gameBoard(name) {
   const rows = 10;
   const columns = 10;
   const board = [];
@@ -77,8 +77,9 @@ export function gameBoard() {
     let [x, y] = array;
 
     if (board[x][y] === "") {
-      console.log("missed");
+      //console.log("missed");
       board[x][y] = "x";
+      return false;
     }
     if (board[x][y] === "c") {
       board[x][y] = board[x][y] + "x";

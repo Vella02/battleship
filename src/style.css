@@ -1,0 +1,62 @@
+.container-div {
+  height: 600px;
+  display: grid;
+  grid-template-columns: repeat(30, 1fr);
+  grid-template-rows: repeat(30, 1fr);
+}
+
+.player-div {
+  grid-row: 6 / 31;
+  grid-column: 1 / 15;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.computer-div {
+  grid-row: 6 / 31;
+  grid-column: 17 / 31;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.horizontalDivplayer {
+  width: 100%;
+  display: flex;
+}
+
+.horizontalDivcomputer {
+  width: 100%;
+  display: flex;
+}
+
+.squareDivplayer {
+  height: 100%;
+  width: 100%;
+  border: solid lightblue;
+}
+
+.squareDivplayer:hover {
+  background: lightblue;
+}
+
+.squareDivcomputer {
+  height: 100%;
+  width: 100%;
+  border: solid lightblue;
+}
+
+.squareDivcomputer:hover {
+  background: lightblue;
+}
+
+.squareDiv:hover {
+  background-color: lightgray;
+}
+
+.miss {
+  background: red;
+}
+
+.hit {
+  background: blue;
+}
